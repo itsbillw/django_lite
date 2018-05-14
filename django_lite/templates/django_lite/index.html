@@ -1,0 +1,39 @@
+{% extends "django_lite/base.html" %}
+{% load bootstrap4 %}
+
+{% block jumbotronheader %}
+<div class="jumbotron text-center" style="margin-bottom:0">
+    <div class="container">
+        <h1 class="display-3">Home page</h1>
+        <p>Test site</p>
+    </div>
+</div>
+{% endblock jumbotronheader %}
+
+{% block content %}
+<main role="main">
+    <div class="container" style="margin-top:30px">
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Register an account</h2>
+                <p>Register an account to make your own Learning Log, and list the topics you're learning about.</p>
+                <p>Whenever you learn something new about a topic, make an entry summarizing what you've learned.</p>
+                <p><a class="btn btn-secondary" href="{% url 'users:register' %}" role="button">View details &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Learning Log</h2>
+                <p>Create knowledgebase by adding entries to topics</p>
+                <p>*** User account required ***</p>
+                <p><a class="btn btn-secondary" href="{% url 'learning_logs:index' %}" role="button">View details &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Comparison Tool</h2>
+                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                <p><a class="btn btn-secondary" href="{% url 'csv_compare:index' %}" role="button">View details &raquo;</a></p>
+            </div>
+        </div>
+        <hr>
+    </div><!-- /container -->
+</main>
+{% endblock %}
