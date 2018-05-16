@@ -8,5 +8,6 @@ urlpatterns = [
     # Home page.
     path('', views.index, name='index'),
     path('new/', views.compare, name='compare'),
+    path('result/', views.result, name='result'),
     path('example/', views.example, name='example'),
 ]

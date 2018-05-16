@@ -7,14 +7,16 @@
         <h2>Begin new comparison by selecting two files</h2>
     </div>
 
-    <form action="{% url 'csv_compare:index' %}" method="post" enctype="multipart/form-data">
-        {% csrf_token %} {# bootstrap_form form #} {% buttons %}
+    <form action="{% url 'csv_compare:result' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {# bootstrap_form form #}
+        {% buttons %}
         <p>Choose first file</p>
         <input type="file" name="csv_file" />
-        <button type="submit" value="Upload">Upload</button>
         <p></p>
         <p>Choose second file</p>
         <input type="file" name="csv_file" />
+        <p></p>
         <button type="submit" value="Upload">Upload</button>
         {% endbuttons %}
     </form>
