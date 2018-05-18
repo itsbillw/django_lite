@@ -24,7 +24,7 @@ def result(request):
         ds2 = pd.read_csv(csvfile2)
 
         ds3 = compare_two_dfs(ds1, ds2)
-        ds3 = ds3.to_html()
+        ds3 = ds3.to_html(index=False)
         context = {'ds3': ds3}
 
     return render(request, 'csv_compare/result.html', context)
